@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-
-
+import About from './components/About';
+import Contact from './components/Contact';
 import Login from './components/Login';
 //import Register from './components/Register';
 
@@ -19,8 +19,8 @@ const Routes = () => {
                         <Switch>
                             <Route exact path="/"> <Home /> </Route>
                             <Route path="/home"> <Home /> </Route>
-
-
+                            <Route path="/about"> <About /> </Route>
+                            <Route path="/contact"> <Contact /> </Route>
                             <Route path="/login"> <Login /> </Route>
 
                             <Route path="/*"> <PageNotFound /> </Route>

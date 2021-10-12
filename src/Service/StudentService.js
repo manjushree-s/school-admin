@@ -1,6 +1,6 @@
 import axios from 'axios';
 class StudentService {
-    baseUrl = `http://localhost:8082/school-admin/student/`;
+    baseUrl = `http://localhost:8082/school-admin/student`;
 
     // loginStudent(student){
     //     return axios.post(this.baseUrl + `-/login`, admin);

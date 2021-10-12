@@ -84,6 +84,10 @@ class AdminService
         return axios.get(this.baseUrl+`/getComplaintById/${complaintId}`);
     }
 
+    getCourseById(courseId) {
+        return axios.get(this.baseUrl+`/getCourseById/${courseId}`);
+    }
+
     getNoticeById(noticeId) {
         return axios.get(this.baseUrl+`/getNoticeById/${noticeId}`);
     }

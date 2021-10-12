@@ -1,100 +1,69 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from "axios";
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
+import admin_icon from '../images/admin_icon.jpg';
+import teacher from '../images/teacher.jpg';
+import Student from '../images/Student.jpg';
 
-const Login = (props) => {
+const Login = () => {
 
     const history = useHistory();
 
-    const [AppUser, setAppUser] = useState({
-        email: '',
-        password: ''
-    });
 
-    useEffect(
-        () => {
-            setAppUser({
-                email: '',
-                password: ''
-            }
-            );
-        }, []);
+    const onSubmitAdmin = (event) => {
 
-    const handleAppUser = (event) => {
-        console.log(event.target.value);
-        setAppUser({
-            ...AppUser,
-            [event.target.name]: event.target.value
-        });
-    };
+        history.push('/AdminLogin');
 
-    const submitAppUser = (event) => {
-        console.log(AppUser.email);
-        console.log(AppUser.password);
-        // axios.post(`http://localhost:8082/appuser/login`, AppUser)
-        //     .then((response) => {
-        //         console.log(response.data);
-                    history.push('/home');
-            // }).catch((error) => {
-            //     console.log(error.message)
-            // });
         event.preventDefault();
     }
+
+    const onSubmitTeacher = (event) => {
+
+        history.push('/TeacherLogin');
+
+        event.preventDefault();
+    }
+
+    const onSubmitStudent = (event) => {
+
+        history.push('/StudentLogin');
+
+        event.preventDefault();
+    }
+
     return (
-        
-        <div className="container">
-            <div classNmae="background">
-            <h1 className="display-4 text-primary">Login</h1>
-
-            <div>
-    
-                <form className="form form-group form-dark row mt-3" onSubmit={submitAppUser}>
-                    <div className="mb-3">
-                        <input
-                            type="text"
-                            className="form-control"
-                            name="email"
-                            id="email"
-                            className="form-control mb-3"
-                            placeholder="Email"
-                            value={AppUser.email}
-                            onChange={handleAppUser}
-                        />
-                        <input
-                            type="password"
-                            className="form-control"
-                            name="password"
-                            id="password"
-                            className="form-control mb-3"
-                            placeholder="Password"
-                            value={AppUser.password}
-                            onChange={handleAppUser} />
-                        <input
-                            type="submit"
-                            id="submit"
-                            name="submit"
-                            className="button1"
-                            value="Login"
-                            onClick={submitAppUser}
-                        />
+        <div className="container" >
+            <title>Admin Home</title>
+            <h1 className="display-4 text-primary">Admin Home</h1>
+            <div class="card-columns">
+                <div class="card" style={{ width: "18rem" }}>
+                    <img src={admin_icon} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Admin Login</h5>
+                        <p class="card-text"></p>
+                        {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                        <button type="button" class="btn btn-primary" onClick={onSubmitAdmin}>Login</button>
                     </div>
-                </form>
+                </div>
+                <div class="card" style={{ width: "18rem" }}>
+                    <img src={teacher} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Teacher Login</h5>
+                        <p class="card-text"></p>
+                        <button type="button" class="btn btn-primary" onClick={onSubmitTeacher}>Login</button>
+                    </div>
+                </div>
+                <div class="card" style={{ width: "18rem" }}>
+                    <img src={Student} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Student Login</h5>
+                        <p class="card-text"></p>
+                        <button type="button" class="btn btn-primary" onClick={onSubmitStudent}>Login</button>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div >
-        
-    )
+            <p><br /><br /></p>
+        </div>
+    );
 }
-export default Login;
 
-// const Login = () => {
-//     return (
-//         <div className="container" >
-//             <h1 className="display-4 text-primary">Login Component</h1>
-//             <p>This is login component.</p>
-//         </div>
-//     );
-// }
-// export default Login;
+export default Login;
