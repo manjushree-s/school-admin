@@ -10,6 +10,7 @@ import TeacherLogin from './components/TeacherLogin';
 import StudentLogin from './components/StudentLogin';
 import PageNotFound from './components/PageNotFound';
 import Home from './components/Home';
+import Amenities from './components/Amenities';
 
 const Routes = () => {
     return (
@@ -24,6 +25,7 @@ const Routes = () => {
                             <Route path="/about"> <About /> </Route>
                             <Route path="/contact"> <Contact /> </Route>
                             <Route path="/login"> <Login /> </Route>
+                            <Route path="/amenities"> <Amenities /> </Route>
                             <Route path="/AdminLogin"> <AdminLogin /> </Route>
                             <Route path="/StudentLogin"> <StudentLogin /> </Route>
                             <Route path="/TeacherLogin"> <TeacherLogin /> </Route>

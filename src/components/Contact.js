@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div className="container" >
             <title>Contact</title>
-            <h1 className="display-4 text-primary">Contact Admin</h1>
+            <h2 className="display-4 text-center">Contact Admin</h2>
             <h3>Welcome!</h3>
             <p>You can contact the admin through the:</p>
             <p>Number: +91-9876543210</p>

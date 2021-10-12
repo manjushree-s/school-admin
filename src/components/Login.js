@@ -33,7 +33,7 @@ const Login = () => {
     return (
         <div className="container" >
             <title>Admin Home</title>
-            <h1 className="display-4 text-primary">Admin Home</h1>
+            <h2 className="display-4 text-center p1">Admin Home</h2>
             <div class="card-columns">
                 <div class="card" style={{ width: "18rem" }}>
                     <img src={admin_icon} class="card-img-top" alt="..." />
