@@ -17,13 +17,13 @@ const Header = () => {
     if (isLoggedIn) {
         return (
             <header class="header sticky-top"style = {{ top:'0',width: '100%',overflow:'hidden', marginLeft:'0',marginRight:'0' }}>
-            <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-info">
                 <div class="container">
                     <Link className="navbar-brand" to="/home">
                             <img src={logo}
                                 height="65px" width="250px" alt="Capgemini" />
-                            <h3>School Administration System</h3>
                         </Link>
+                        <h1>School Administration System</h1>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                             <span class="navbar-toggler-icon"></span>
                         </button>

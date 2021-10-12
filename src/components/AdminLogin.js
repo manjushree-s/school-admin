@@ -2,11 +2,6 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-
-
-
-
-
 const AdminLogin = () => {
 
     const history = useHistory();
@@ -71,7 +66,7 @@ const AdminLogin = () => {
                             placeholder="Enter Password" />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group container text-center">
                     <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                     </div>
