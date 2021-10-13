@@ -2,28 +2,30 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+
+
 const StudentLogin = () => {
 
     const history = useHistory();
 
 
-    const [oneEmp, setOneEmp] = useState({
+    const [oneStu, setOneStu] = useState({
         studentId: 0,
         // employeeName: '',
         studentPassword: ''
     });
 
-    const handleOneEmpData = (evt) => {
-        console.log("handleOneEmpData", evt.target.name, evt.target.value);
-        setOneEmp({
-            ...oneEmp,
+    const handleOneStuData = (evt) => {
+        console.log("handleOneStuData", evt.target.name, evt.target.value);
+        setOneStu({
+            ...oneStu,
             [evt.target.name]: evt.target.value
         });
     }
 
     const onSubmit = (evt) => {
 
-        axios.post('http://localhost:8082/school-admin/student/loginStudent', oneEmp)
+        axios.post('http://localhost:8082/school-admin/student/studentLogin', oneStu)
             .then(async (response) => {
                 await history.push('/StudentHome');
             }).catch(error => {
@@ -46,9 +48,11 @@ const StudentLogin = () => {
                         <input type="number"
                             id="studentId"
                             name="studentId"
+                             //test
+                             data-testid="studentId"
                             className="form-control mb-3"
-                            value={oneEmp.studentId}
-                            onChange={handleOneEmpData}
+                            value={oneStu.studentId}
+                            onChange={handleOneStuData}
                             placeholder="Enter Id" />
                     </div>
 
@@ -57,9 +61,11 @@ const StudentLogin = () => {
                         <input type="password"
                             id="studentPassword"
                             name="studentPassword"
+                             //test
+                             data-testid="studentPassword"
                             className="form-control mb-3"
-                            value={oneEmp.studentPassword}
-                            onChange={handleOneEmpData}
+                            value={oneStu.studentPassword}
+                            onChange={handleOneStuData}
                             placeholder="Enter Password" />
                     </div>
 
@@ -69,7 +75,9 @@ const StudentLogin = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="btn btn-primary btn-block" onClick={onSubmit}>Submit</button>
+                    <button type="submit" className="btn btn-primary btn-block"
+                     //test
+                     data-testid="submit" onClick={onSubmit}>Submit</button>
 
 
                 </form>

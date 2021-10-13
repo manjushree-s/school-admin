@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import { screen, p, button, getByTestId, getByText,queryByTestId  } from '@testing-library/dom';
 
-import AdminLogin from './components/AdminLogin';
-import StudentLogin from './components/StudentLogin';
-import TeacherLogin from './components/TeacherLogin';
+import AdminLogin from './components/Admin/AdminLogin';
+import StudentLogin from './components/Student/StudentLogin';
+import TeacherLogin from './components/Teacher/TeacherLogin';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 

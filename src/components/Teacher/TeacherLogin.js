@@ -46,6 +46,8 @@ const TeacherLogin = () => {
                         <input type="number"
                             id="teacherId"
                             name="teacherId"
+                             //test
+                             data-testid="teacherId"
                             className="form-control mb-3"
                             value={oneEmp.teacherId}
                             onChange={handleOneEmpData}
@@ -57,6 +59,8 @@ const TeacherLogin = () => {
                         <input type="password"
                             id="teacherPassword"
                             name="teacherPassword"
+                             //test
+                             data-testid="teacherPassword"
                             className="form-control mb-3"
                             value={oneEmp.teacherPassword}
                             onChange={handleOneEmpData}
@@ -69,7 +73,9 @@ const TeacherLogin = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="btn btn-primary btn-block" onClick={onSubmit}>Submit</button>
+                    <button type="submit" className="btn btn-primary btn-block" 
+                     //test
+                     data-testid="submit" onClick={onSubmit}>Submit</button>
 
 
                 </form>

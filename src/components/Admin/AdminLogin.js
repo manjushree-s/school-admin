@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+
 const AdminLogin = () => {
 
     const history = useHistory();
@@ -49,6 +50,8 @@ const AdminLogin = () => {
                     <input type="number"
                             id="adminId"
                             name="adminId"
+                          // test
+                           data-testid="adminId"
                             className="form-control mb-3"
                             value={oneEmp.adminId}
                             onChange={handleOneEmpData}
@@ -60,19 +63,24 @@ const AdminLogin = () => {
                     <input type="password"
                             id="adminPassword"
                             name="adminPassword"
+                            //test
+                            data-testid="adminPassword"
                             className="form-control mb-3"
                             value={oneEmp.adminPassword}
                             onChange={handleOneEmpData}
                             placeholder="Enter Password" />
                 </div>
 
-                <div className="form-group container text-center">
+                <div className="form-group">
                     <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" id="customCheck1" />
                     </div>
                 </div>
-
-                <button type="submit" className="btn btn-primary btn-block" onClick={onSubmit}>Submit</button>
+               
+                <button type="submit" className="btn btn-primary btn-block"
+                 //test
+                 data-testid="submit"
+                onClick={onSubmit}>Submit</button>
 
 
             </form>

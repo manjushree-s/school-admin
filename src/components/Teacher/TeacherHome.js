@@ -72,7 +72,7 @@ const TeacherHome = () => {
     }
 
     return (
-        <div className="container" >
+        <div className="container text-center" >
             <title>Teacher Home</title>
             <h1 className="display-4 text-center">Teacher Home</h1>
             <h4 className="text-center">The Art of Teaching is the Art of Assisting DISCOVERY!</h4>
