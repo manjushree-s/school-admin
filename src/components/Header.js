@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 import { useState, useEffect } from 'react';
+import logo from '../images/logo.jpg';
 
 const Header = () => {
 
@@ -16,6 +17,10 @@ const Header = () => {
             <header class="header sticky-top" style={{ top: '0', width: '100%', overflow: 'hidden', marginLeft: '0', marginRight: '0' }}>
                 <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-success text-white">
                     <div class="container">
+                    <Link className="navbar-brand" to="/home">
+                        <img src={logo}
+                            height="95px" width="115px" alt="Capgemini" />
+                    </Link>
                         <h1 className="h1">School Administration System</h1>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                             <span class="navbar-toggler-icon"></span>
