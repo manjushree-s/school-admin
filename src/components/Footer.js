@@ -16,7 +16,7 @@ const Footer = () => {
             }>
 
                 <div class="container text-center" >
-                    Copyright &copy; School Admin Capgemini
+                    Copyright &copy; School Administration
                 </div>
 
             </footer>

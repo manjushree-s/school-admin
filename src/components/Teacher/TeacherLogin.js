@@ -49,6 +49,8 @@ const TeacherLogin = () => {
                              //test
                              data-testid="teacherId"
                             className="form-control mb-3"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
                             value={oneEmp.teacherId}
                             onChange={handleOneEmpData}
                             placeholder="Enter Id" />

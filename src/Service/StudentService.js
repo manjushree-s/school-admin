@@ -2,9 +2,9 @@ import axios from 'axios';
 class StudentService {
     baseUrl = `http://localhost:8082/school-admin/student`;
 
-    // loginStudent(student){
-    //     return axios.post(this.baseUrl + `-/login`, admin);
-    // }
+    loginStudent(student){
+        return axios.post(this.baseUrl + `/login`, student);
+    }
 
     getAllComplaint() {
         return axios.get(this.baseUrl + `/getAllComplaint`);

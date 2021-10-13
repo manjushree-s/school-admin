@@ -2,30 +2,28 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-
-
 const StudentLogin = () => {
 
     const history = useHistory();
 
 
-    const [oneStu, setOneStu] = useState({
+    const [oneEmp, setOneEmp] = useState({
         studentId: 0,
         // employeeName: '',
         studentPassword: ''
     });
 
-    const handleOneStuData = (evt) => {
-        console.log("handleOneStuData", evt.target.name, evt.target.value);
-        setOneStu({
-            ...oneStu,
+    const handleOneEmpData = (evt) => {
+        console.log("handleOneEmpData", evt.target.name, evt.target.value);
+        setOneEmp({
+            ...oneEmp,
             [evt.target.name]: evt.target.value
         });
     }
 
     const onSubmit = (evt) => {
 
-        axios.post('http://localhost:8082/school-admin/student/studentLogin', oneStu)
+        axios.post('http://localhost:8082/school-admin/student/loginStudent', oneEmp)
             .then(async (response) => {
                 await history.push('/StudentHome');
             }).catch(error => {
@@ -49,10 +47,12 @@ const StudentLogin = () => {
                             id="studentId"
                             name="studentId"
                              //test
-                             data-testid="studentId"
+                             data-testid="studentrId"
                             className="form-control mb-3"
-                            value={oneStu.studentId}
-                            onChange={handleOneStuData}
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
+                            value={oneEmp.studentId}
+                            onChange={handleOneEmpData}
                             placeholder="Enter Id" />
                     </div>
 
@@ -64,8 +64,8 @@ const StudentLogin = () => {
                              //test
                              data-testid="studentPassword"
                             className="form-control mb-3"
-                            value={oneStu.studentPassword}
-                            onChange={handleOneStuData}
+                            value={oneEmp.studentPassword}
+                            onChange={handleOneEmpData}
                             placeholder="Enter Password" />
                     </div>
 
@@ -75,7 +75,7 @@ const StudentLogin = () => {
                         </div>
                     </div>
 
-                    <button type="submit" className="btn btn-primary btn-block"
+                    <button type="submit" className="btn btn-primary btn-block" 
                      //test
                      data-testid="submit" onClick={onSubmit}>Submit</button>
 
