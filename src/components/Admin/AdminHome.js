@@ -4,7 +4,7 @@ import principal from 'C:/Users/Manjushree S/school-admin/src/images/Principal.j
 import complaint from 'C:/Users/Manjushree S/school-admin/src/images/complaint.jpg';
 import course from 'C:/Users/Manjushree S/school-admin/src/images/course.jpg';
 import notice from 'C:/Users/Manjushree S/school-admin/src/images/notice.jpg';
-import student from 'C:/Users/Manjushree S/school-admin/src/images/student.jpg';
+import student from 'C:/Users/Manjushree S/school-admin/src/images/Student.jpg';
 import studentsm from 'C:/Users/Manjushree S/school-admin/src/images/studentsm.jpg';
 import studentdetails from 'C:/Users/Manjushree S/school-admin/src/images/studentdetails.jpg';
 import teacheradmin from 'C:/Users/Manjushree S/school-admin/src/images/teacher-admin.jpg';
@@ -167,7 +167,7 @@ const AdminHome = () => {
         event.preventDefault();
     }
 
-    const onSubmitGetComplaintById = (event) => {
+    const onSubmitViewComplaintById = (event) => {
 
         history.push('/GetComplaintById');
 
@@ -312,7 +312,7 @@ const AdminHome = () => {
                     <div class="card-body">
                         <h5 class="card-title text-center">View Complaint by ID</h5>
                         <p class="card-text text-center">We all need people who will give us feedback. That’s how we improve.</p>
-                        <a href="#" class="btn btn-primary" onClick={onSubmitGetComplaintById}>Go </a>
+                        <a href="#" class="btn btn-primary" onClick={onSubmitViewComplaintById}>Go </a>
                     </div>
                 </div>
             </div>

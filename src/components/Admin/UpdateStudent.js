@@ -20,7 +20,7 @@ const UpdateStudent = () => {
 
         console.log("handleStudentData", evt.target.name, evt.target.value);
         setStudent({
-            ...emp,
+            ...student,
             [evt.target.name]: evt.target.value,
            
 
@@ -36,7 +36,7 @@ const UpdateStudent = () => {
         axios.put('http://localhost:8082//updateStudent', student)
             .then((response) => {
                 console.log(response);
-                setEmp(response.data);
+                setStudent(response.data);
                 alert(`Student updated successfully!`)
             }).catch(error => {
                 console.log(error.message);

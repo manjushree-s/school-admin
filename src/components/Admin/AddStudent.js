@@ -28,8 +28,8 @@ const AddStudent = () => {
  
     const submitStudent = (evt) => {
  
-        console.log(emp);
-        axios.post('http://localhost:8082/school-admin/admin/addStudent', emp)
+        console.log(student);
+        axios.post('http://localhost:8082/school-admin/admin/addStudent', student)
             .then((response) => {
                 console.log(response);
                 setStudent(response.data);

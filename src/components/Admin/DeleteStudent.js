@@ -18,7 +18,7 @@ const DeleteStudent = () => {
 
         console.log("handleStudentData", evt.target.name, evt.target.value);
         setStudent({
-            ...emp,
+            ...student,
             [evt.target.name]: evt.target.value,
            
 

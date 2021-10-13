@@ -115,7 +115,7 @@ const UpdateNotice = () => {
                                 className="form-control mb-3"
                                 value={hw.date}
                                 placeholder="date"
-                                onChange={handleHwData()}
+                                onChange={handlehwData()}
                             />
                         </div>
                     </form>

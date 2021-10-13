@@ -34,7 +34,7 @@ const DeleteTeacher = () => {
         axios.delete(`http://localhost:8082/school-admin/admin/deleteTeacher/${teacher.teacherId}`)
             .then((response) => {
                 console.log(response);
-                setStudent(response.data);
+                setTeacher(response.data);
                 alert('Teacher deleted successfully!')
             }).catch(error => {
                 console.log(error.message);

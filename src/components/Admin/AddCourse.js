@@ -51,7 +51,7 @@ const AddCourse = () => {
         axios.post('http://localhost:8082/school-admin/teacher/addCourse', course)
             .then((response) => {
                 console.log(response);
-                sethomework(response.data);
+                setCourse(response.data);
                 alert('Course Added Successfully.')
             }).catch(error => {
                 console.log(error.message);

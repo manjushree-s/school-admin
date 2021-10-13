@@ -19,7 +19,7 @@ const UpdateTeacher = () => {
 
         console.log("handleTeacherData", evt.target.name, evt.target.value);
         setTeacher({
-            ...emp,
+            ...teacher,
             [evt.target.name]: evt.target.value,
            
 
@@ -35,7 +35,7 @@ const UpdateTeacher = () => {
         axios.put('http://localhost:8082//updateTeacher', teacher)
             .then((response) => {
                 console.log(response);
-                setEmp(response.data);
+                setTeacher(response.data);
                 alert(`Teacher updated successfully!`)
             }).catch(error => {
                 console.log(error.message);

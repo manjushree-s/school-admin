@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
  
 const AddTeacher = () => {
  
-    const [student , setStudent] = useState({
+    const [teacher , setTeacher] = useState({
  
         teacherId: 0,
         teacherName: '',
@@ -29,10 +29,10 @@ const AddTeacher = () => {
     const submitTeacher = (evt) => {
  
         console.log(teacher);
-        axios.post('http://localhost:8082/school-admin/admin/addTeacher', emp)
+        axios.post('http://localhost:8082/school-admin/admin/addTeacher', teacher)
             .then((response) => {
                 console.log(response);
-                setStudent(response.data);
+                setTeacher(response.data);
                 alert(`Teacher added successfully!`)
             }).catch(error => {
                 console.log(error.message);

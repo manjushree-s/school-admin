@@ -22,11 +22,11 @@ import DeleteStudyMaterial from './components/Admin/DeleteStudyMaterial';
 import DeleteTeacher from './components/Admin/DeleteTeacher';
 import GetAdminById from './components/Admin/GetAdminById';
 import GetAllAdmin from './components/Admin/GetAllAdmin';
-import GetAllComplaint from './components/Admin/GetAllComplaint';
+import GetAllComplaints from './components/Admin/GetAllComplaint';
 import GetAllCourse from './components/Admin/GetAllCourse';
 import GetAllNotice from './components/Admin/GetAllNotice';
 import GetAllStudent from './components/Admin/GetAllStudent';
-import GetAllStudyMaterials from './components/Admin/GetAllStudyMaterials';
+import GetAllStudyMaterial from './components/Admin/GetAllStudyMaterials';
 import GetAllTeacher from './components/Admin/GetAllTeacher';
 import GetComplaintById from './components/Admin/GetComplaintById';
 import GetNoticeById from './components/Admin/GetNoticeById';
@@ -41,23 +41,23 @@ import StudentHome from './components/Student/StudentHome';
 import AddComplaint from './components/Student/AddComplaint';
 import GetStudyMaterial from './components/Student/GetStudyMaterialById';
 import GetAllComplaint from './components/Student/GetAllComplaint';
-import GetAllCourse from './components/Student/GetAllCourse';
+import GetAllCourses from './components/Student/GetAllCourse';
 import UpdateHomeWork from './components/Student/UpdateHomework';
-import DeleteComplaint from './components/Student/DeleteComplaint';
-import GetComplaintById from './components/Student/GetComplaintById';
+import DeleteComplaints from './components/Student/DeleteComplaint';
+import GetComplaintsById from './components/Student/GetComplaintById';
 import UpdateComplaint from './components/Student/UpdateComplaint';
-import GetAllNotice from './components/Student/GetAllNotice';
-import GetStudyMaterialById from './components/Student/GetStudyMaterialById';
-import GetNoticeById from './components/Student/GetNoticeById';
-import GetAllStudyMaterial from './components/Student/GetAllStudyMaterials';
-import GetHomeworkById from './components/Student/GetHomeworkById';
+import GetAllNotices from './components/Student/GetAllNotice';
+import GetStudyMaterialsById from './components/Student/GetStudyMaterialById';
+import GetNoticesById from './components/Student/GetNoticeById';
+import GetAllStudyMaterials from './components/Student/GetAllStudyMaterials';
+import GetHomeworksById from './components/Student/GetHomeworkById';
 import TeacherLogin from './components/Teacher/TeacherLogin';
 import TeacherHome from './components/Teacher/TeacherHome';
 import AddHomework from './components/Teacher/AddHomework';
 import GetHomework from './components/Teacher/GetHomework';
 import AddStudyMaterial from './components/Teacher/AddStudyMaterial';
 import DeleteHomework from './components/Teacher/DeleteHomework';
-import DeleteStudyMaterial from './components/Teacher/DeleteStudyMaterial';
+import DeleteStudyMaterials from './components/Teacher/DeleteStudyMaterial';
 import UpdateStudyMaterial from './components/Teacher/UpdateStudyMaterial';
 import UpdateHomework from './components/Teacher/UpdateHomework'
 import ViewHomework from './components/Teacher/ViewHomework';
@@ -93,11 +93,11 @@ const Routes = () => {
                             <Route path="/DeleteTeacher"> <DeleteTeacher /> </Route>
                             <Route path="/GetAdminById"> <GetAdminById /> </Route>
                             <Route path="/GetAllAdmin"> <GetAllAdmin /> </Route>
-                            <Route path="/GetAllComplaint"> <GetAllComplaint /> </Route>
+                            <Route path="/GetAllComplaints"> <GetAllComplaints /> </Route>
                             <Route path="/GetAllCourse"> <GetAllCourse /> </Route>
                             <Route path="/GetAllNotice"> <GetAllNotice /> </Route>
                             <Route path="/GetAllStudent"> <GetAllStudent /> </Route>
-                            <Route path="/GetAllStudyMaterials"> <GetAllStudyMaterials /> </Route>
+                            <Route path="/GetAllStudyMaterial"> <GetAllStudyMaterial /> </Route>
                             <Route path="/GetAllTeacher"> <GetAllTeacher /> </Route>
                             <Route path="/GetComplaintById"> <GetComplaintById /> </Route>
                             <Route path="/GetNoticeById"> <GetNoticeById /> </Route>
@@ -109,18 +109,18 @@ const Routes = () => {
                             <Route path="/UpdateTeacher"> <UpdateTeacher /> </Route>
                             <Route path="/StudentLogin"> <StudentLogin /> </Route>
                             <Route path="/StudentHome"> <StudentHome /></Route>
-                            <Route path="/getComplaintById"><GetComplaintById /></Route>
+                            <Route path="/getComplaintsById"><GetComplaintsById /></Route>
                             <Route path="/updateComplaint"><UpdateComplaint /></Route>
-                            <Route path="/deleteComplaint"><DeleteComplaint /></Route>
+                            <Route path="/deleteComplaints"><DeleteComplaints /></Route>
                             <Route path="/studyMaterials"><GetStudyMaterial /></Route>
                             <Route path="/getAllComplaint"><GetAllComplaint /></Route>
                             <Route path="/updateHomework"><UpdateHomeWork /></Route>
-                            <Route path="/getAllCourse"><GetAllCourse /></Route>
-                            <Route path="/getAllNotice"><GetAllNotice /></Route>
-                            <Route path="/getAllStudyMaterials"><GetAllStudyMaterial /></Route>
-                            <Route path="/getStudyMaterialById"><GetStudyMaterialById /></Route>
-                            <Route path="/getNoticeById"><GetNoticeById /></Route>
-                            <Route path="/gethomeworkById"><GetHomeworkById /></Route>
+                            <Route path="/getAllCourses"><GetAllCourses /></Route>
+                            <Route path="/getAllNotices"><GetAllNotices /></Route>
+                            <Route path="/getAllStudyMaterials"><GetAllStudyMaterials /></Route>
+                            <Route path="/getStudyMaterialsById"><GetStudyMaterialsById /></Route>
+                            <Route path="/getNoticesById"><GetNoticesById /></Route>
+                            <Route path="/gethomeworksById"><GetHomeworksById /></Route>
                             <Route path="/addComplaint"><AddComplaint /></Route>
                             <Route path="/TeacherLogin"> <TeacherLogin /></Route>
                             <Route path="/TeacherHome"> <TeacherHome /></Route>
@@ -129,7 +129,7 @@ const Routes = () => {
                             <Route path="/AddStudyMaterial"> <AddStudyMaterial /></Route>
                             <Route path="/GetStudyMaterial"> <GetStudyMaterial /></Route>
                             <Route path="/DeleteHomework"> <DeleteHomework /></Route>
-                            <Route path="/DeleteStudyMaterial"> <DeleteStudyMaterial /></Route>
+                            <Route path="/DeleteStudyMaterials"> <DeleteStudyMaterials /></Route>
                             <Route path="/UpdateStudyMaterial"> <UpdateStudyMaterial /></Route>
                             <Route path="/UpdateHomework"> <UpdateHomework /></Route>
                             <Route path="/ViewHomework"> <ViewHomework /></Route>
