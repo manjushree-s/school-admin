@@ -48,7 +48,7 @@ const AddCourse = () => {
     const submitAddCourse = (event) => {
 
         console.log(course);
-        axios.post('http://localhost:8082/school-admin/teacher/addCourse', course)
+        axios.post('http://localhost:8082/school-admin/admin/addCourse', course)
             .then((response) => {
                 console.log(response);
                 setCourse(response.data);

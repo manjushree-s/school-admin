@@ -40,7 +40,7 @@ const GetStudyMaterialById = () => {
             .then((response) => {
                 setsm(response.data);
             }).catch(error => {
-                alert(" does not exist!");
+                alert("Record does not exist!");
             });
         evt.preventDefault();
     }
@@ -72,12 +72,12 @@ const GetStudyMaterialById = () => {
                             id="submit"
                             name="submit"
                             className="btn btn-primary mb-3"
-                            value="View SM Details"
+                            value="View Study Material Details"
                             
                         />
                     </div>
                 </form>
-                {/* <p> {emp.employee.employeeId} <br />{emp.employee.employeeName} <br />{emp.month}<br />{emp.year}<br />{emp.salary} </p> */}
+                
                 <table class="table table-hover table-dark">
                     <thead>
                         <tr>

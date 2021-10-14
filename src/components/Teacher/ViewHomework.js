@@ -37,7 +37,7 @@ const ViewHomeWork = () => {
 
     const submitGetAllhw = (evt) => {
         console.log("submitGetAllhw");
-        axios.get('http://localhost:8082/school-admin/teacher/teacher/getHomework')
+        axios.get('http://localhost:8082/school-admin/teacher/getHomework')
             .then((response) => {
                 dispatch(getAllHw(response.data));
             }).catch(error => {

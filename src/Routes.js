@@ -36,6 +36,7 @@ import GetTeacherById from './components/Admin/GetTeacherById';
 import UpdateNotice from './components/Admin/UpdateNotice';
 import UpdateStudent from './components/Admin/UpdateStudent';
 import UpdateTeacher from './components/Admin/UpdateTeacher';
+//Student
 import StudentLogin from './components/Student/StudentLogin';
 import StudentHome from './components/Student/StudentHome';
 import AddComplaint from './components/Student/AddComplaint';
@@ -50,7 +51,8 @@ import GetAllNotices from './components/Student/GetAllNotice';
 import GetStudyMaterialsById from './components/Student/GetStudyMaterialById';
 import GetNoticesById from './components/Student/GetNoticeById';
 import GetAllStudyMaterials from './components/Student/GetAllStudyMaterials';
-import GetHomeworksById from './components/Student/GetHomeworkById';
+import GetHomeworkById from './components/Student/GetHomeworkById';
+//Teacher
 import TeacherLogin from './components/Teacher/TeacherLogin';
 import TeacherHome from './components/Teacher/TeacherHome';
 import AddHomework from './components/Teacher/AddHomework';
@@ -110,6 +112,7 @@ const Routes = () => {
                             <Route path="/UpdateNotice"> <UpdateNotice /> </Route>
                             <Route path="/UpdateStudent"> <UpdateStudent /> </Route>
                             <Route path="/UpdateTeacher"> <UpdateTeacher /> </Route>
+                            {/* //Student */}
                             <Route path="/StudentLogin"> <StudentLogin /> </Route>
                             <Route path="/StudentHome"> <StudentHome /></Route>
                             <Route path="/getComplaintsById"><GetComplaintsById /></Route>
@@ -123,8 +126,9 @@ const Routes = () => {
                             <Route path="/getAllStudyMaterials"><GetAllStudyMaterials /></Route>
                             <Route path="/getStudyMaterialsById"><GetStudyMaterialsById /></Route>
                             <Route path="/getNoticesById"><GetNoticesById /></Route>
-                            <Route path="/gethomeworksById"><GetHomeworksById /></Route>
+                            <Route path="/GetHomeworkById"><GetHomeworkById /></Route>
                             <Route path="/addComplaint"><AddComplaint /></Route>
+                            {/* //Teacher */}
                             <Route path="/TeacherLogin"> <TeacherLogin /></Route>
                             <Route path="/TeacherHome"> <TeacherHome /></Route>
                             <Route path="/AddHomework"> <AddHomework /></Route>

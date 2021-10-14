@@ -55,8 +55,8 @@ const AddStudent = () => {
                         <p>Studnet Id</p>
                         <input
                             type="number"
-                            id="studnetId"
-                            name="studnetId"
+                            id="studentId"
+                            name="studentId"
                             className="form-control mb-3"
                             value={student.studentId}
                             placeholder="Enter Id"
@@ -65,8 +65,8 @@ const AddStudent = () => {
                         <p>Student Name</p>
                         <input
                             type="text"
-                            id="studnetName"
-                            name="studnetName"
+                            id="studentName"
+                            name="studentName"
                             className="form-control mb-3"
                             pattern="[A-Za-z ]+" 
                             title="Please enter only characters!"
@@ -79,8 +79,8 @@ const AddStudent = () => {
                         <p>Passsword</p>
                         <input
                             type="password"
-                            id="studnetPassword"
-                            name="studnetPassword"
+                            id="studentPassword"
+                            name="studentPassword"
                             className="form-control mb-3"
                             value={student.studentPassword}
                             placeholder="Enter Password"

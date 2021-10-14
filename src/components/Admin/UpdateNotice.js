@@ -105,7 +105,7 @@ const UpdateNotice = () => {
                             id="submit"
                             name="submit"
                             className="btn btn-primary mb-3"
-                            value="Update Homework"
+                            value="Update Notice"
                             />
                             <p>Date</p>
                             <input

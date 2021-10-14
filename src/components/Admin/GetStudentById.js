@@ -32,7 +32,7 @@ const GetStudentById = () => {
 
     const submitsmId = (evt) => {
         console.log("submitGetsmById");
-        axios.get(`http://localhost:8083/school-admin/admin/getStudentById/${sm.studentId}`)
+        axios.get(`http://localhost:8082/school-admin/admin/getStudentById/${sm.studentId}`)
             .then((response) => {
                 setsm(response.data);
             }).catch(error => {

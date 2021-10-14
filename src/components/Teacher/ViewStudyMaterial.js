@@ -14,7 +14,7 @@ const ViewStudyMaterial = () => {
 
     const submitGetAllsm = (evt) => {
         console.log("submitGetAllsm");
-        axios.get('http://localhost:8082/school-admin/teacher/teacher/getAllStudyMaterial')
+        axios.get('http://localhost:8082/school-admin/teacher/getAllStudyMaterial')
             .then((response) => {
                 dispatch(getAllSm(response.data));
             }).catch(error => {

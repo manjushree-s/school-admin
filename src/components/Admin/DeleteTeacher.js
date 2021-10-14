@@ -58,7 +58,7 @@ const DeleteTeacher = () => {
                         <input
                             type="number"
                             id="teacherId"
-                            name="teachertId"
+                            name="teacherId"
                             className="form-control mb-3"
                             value={teacher.teacherId}
                             placeholder="Enter Id"

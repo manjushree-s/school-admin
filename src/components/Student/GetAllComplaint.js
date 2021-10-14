@@ -75,37 +75,31 @@ const GetAllComplaint = (props) => {
                         onClick={viewComplaint}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">studentId </th>
-                                <th scope="col">complaintId</th>
-                                <th scope="col">note</th>
-                                <th scope="col">Date</th>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>Complaint ID</u></div>
+                            <div className="col-sm"><u>Complaint Note</u></div>
+                            <div className="col-sm"><u>Date</u></div>
+                            <div className="col-sm"><u>Student ID</u></div>
+                        </p>
+                    </div>
+                    {complaintList.map((p, k) => {
+                        console.log(p);
+                        return (
+
+                            <div k={k} className="row">
+
+                                <div className="col-sm">{p.complaintId}</div>
+                                <div className="col-sm">{p.note}</div>
+                                <div className="col-sm">{p.date}</div>
+                                <div className="col-sm">{p.studentId.studentId}</div>
+
+                            </div>
+
+                        )
+                    })}
                                
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {complaintList.map((p, k) => {
-                                    console.log(p);
-                                    return (
-
-                                        <div k={k}>
-
-                                            <td>{p.studentId.studentId}</td>
-                                            <td>{p.complaintId}</td>
-                                            <td>{p.note}</td>
-                                            <td>{p.date}</td>
-                                            
-                                        </div>
-
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
 
             </div>

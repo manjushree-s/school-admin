@@ -32,11 +32,11 @@ const GetTeacherById = () => {
 
     const submitsmId = (evt) => {
         console.log("submitGetsmById");
-        axios.get(`http://localhost:8083/school-admin/admin/getTeacherById/${sm.teacherId}`)
+        axios.get(`http://localhost:8082/school-admin/admin/getTeacherById/${sm.teacherId}`)
             .then((response) => {
                 setsm(response.data);
             }).catch(error => {
-                alert(" does not exist!");
+                alert("Record does not exist!");
             });
         evt.preventDefault();
     }

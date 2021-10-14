@@ -62,36 +62,29 @@ const GetAllStudent = (props) => {
                         onClick={viewstudent}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>Student ID</u></div>
+                            <div className="col-sm"><u>Student Name</u></div>
+                            <div className="col-sm"><u>Student Password</u></div>
+                        </p>
+                    </div>
+                    {studentList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                                <th scope="col">Student ID</th>
-                                <th scope="col">Student Name</th>
-                                <th scope="col">Student Password</th>
+                            <div k={k} className="row">
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {studentList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                                <div className="col-sm">{p.studentId}</div>
+                                <div className="col-sm">{p.studentName}</div>
+                                <div className="col-sm">{p.studentPassword}</div>
 
-                                        <div k={k}>
-                                            
-                                            <td>{p.studentId}</td>
-                                            <td>{p.studentName}</td>
-                                            <td>{p.studentPassword}</td>
+                            </div>
 
-                                        </div>
-
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
+                        )
+                    })}
+       
                 </div>
 
             </div>

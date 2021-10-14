@@ -37,7 +37,7 @@ const DeleteNotice = () => {
     const submitDeleteNotice = (evt) => {
 
         console.log("submitDeleteNotice");
-        axios.delete(`http://localhost:8083/school-admin/student/deleteNotice/${notice.noticeId}`)
+        axios.delete(`http://localhost:8082/school-admin/admin/deleteNotice/${notice.noticeId}`)
             .then((response) => {
                // console.log(response);
                 setNotice(response.data);

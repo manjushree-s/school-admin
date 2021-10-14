@@ -33,7 +33,7 @@ const UpdateStudent = () => {
     const submitUpdateStudent = (evt) => {
 
         console.log(student);
-        axios.put('http://localhost:8082//updateStudent', student)
+        axios.put('http://localhost:8082/school-admin/admin/updateStudent', student)
             .then((response) => {
                 console.log(response);
                 setStudent(response.data);
@@ -86,8 +86,8 @@ const UpdateStudent = () => {
                             id="studentPassword"
                             name="studentPassword"
                             className="form-control mb-3"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
+                            // pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            // title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
                             value={student.studentPassword}
                             placeholder="Enter Password"
                             onChange={handleStudentData}

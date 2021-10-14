@@ -213,6 +213,8 @@ const StudentHome = () => {
                         <a href="#" class="btn btn-primary" onClick={onSubmitGetHomeworkById}>Go </a>
                     </div>
                 </div>
+                </div>
+                <div class="card-columns">
                 <div class="card" style={{ width: "15rem" }}>
                     <img src={studenthm} class="card-img-top" alt="..." />
                     <div class="card-body">

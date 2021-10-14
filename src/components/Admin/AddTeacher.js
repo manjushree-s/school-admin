@@ -80,7 +80,7 @@ const AddTeacher = () => {
                         <input
                             type="password"
                             id="teacherPassword"
-                            name="teachertPassword"
+                            name="teacherPassword"
                             className="form-control mb-3"
                             value={teacher.teacherPassword}
                             placeholder="Enter Password"

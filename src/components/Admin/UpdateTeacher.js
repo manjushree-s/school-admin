@@ -32,7 +32,7 @@ const UpdateTeacher = () => {
     const submitUpdateTeacher = (evt) => {
 
         console.log(teacher);
-        axios.put('http://localhost:8082//updateTeacher', teacher)
+        axios.put('http://localhost:8082/school-admin/admin/updateTeacher', teacher)
             .then((response) => {
                 console.log(response);
                 setTeacher(response.data);
@@ -85,8 +85,6 @@ const UpdateTeacher = () => {
                             id="teacherPassword"
                             name="teacherPassword"
                             className="form-control mb-3"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required
                             value={teacher.teacherPassword}
                             placeholder="Enter Password"
                             onChange={handleTeacherData}

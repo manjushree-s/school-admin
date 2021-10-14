@@ -141,7 +141,7 @@ const AdminHome = () => {
 
     const onSubmitUpdateStudent = (event) => {
 
-        history.push('/UpdateNotice');
+        history.push('/UpdateStudent');
 
         event.preventDefault();
     }
@@ -163,13 +163,6 @@ const AdminHome = () => {
     const onSubmitGetAdminById = (event) => {
 
         history.push('/GetAdminById');
-
-        event.preventDefault();
-    }
-
-    const onSubmitViewComplaintById = (event) => {
-
-        history.push('/GetComplaintById');
 
         event.preventDefault();
     }
@@ -312,7 +305,7 @@ const AdminHome = () => {
                     <div class="card-body">
                         <h5 class="card-title text-center">View Complaint by ID</h5>
                         <p class="card-text text-center">We all need people who will give us feedback. That’s how we improve.</p>
-                        <a href="#" class="btn btn-primary" onClick={onSubmitViewComplaintById}>Go </a>
+                        <a href="#" class="btn btn-primary" onClick={onSubmitGetComplaintById}>Go </a>
                     </div>
                 </div>
             </div>
