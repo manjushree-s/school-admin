@@ -2,7 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {  getAllSm} from 'C:/Users/Manjushree S/school-admin/src/redux/StudyMaterialSlice';
+// import {  getAllSm} from '../../redux/StudyMaterialSlice';
+import { getAllSm } from '../../redux/StudyMaterialSlice';
+
 const ViewStudyMaterial = () => {
 
     const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const ViewStudyMaterial = () => {
 
     const submitGetAllsm = (evt) => {
         console.log("submitGetAllsm");
-        axios.get('http://localhost:8082/school-admin/teacher/getAllStudyMaterial')
+        axios.get('http://localhost:8082/school-admin/teacher/teacher/getAllStudyMaterial')
             .then((response) => {
                 dispatch(getAllSm(response.data));
             }).catch(error => {
@@ -36,41 +38,43 @@ const ViewStudyMaterial = () => {
                                 onClick={submitGetAllsm}
                             />
                         </div>
-                        <div className="Container text-left">
-                            <table class="table table-hover table-dark">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Teacher Id </th>
-        
-                                        <th scope="col">HomeWork Id</th>
-                                        <th scope="col">Name</th>
-                                        
-                                        {/* <p>teacherID studyID name</p> */}
+                        <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>TeacherId</u>
+                            </div>
+                            <div className="col-sm"><u>StudyMaterial Id</u></div>
+                            <div className="col-sm"><u>Name</u></div>
+ 
+                        </p>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        {allsm.map((p, k) => {
-                                            console.log(p);
-                                            return (
-        
-                                                <div k={k}>
-        
-                                                    <td >{p.teacherId.teacherId}</td>
-                                                    <td>{p.studyId}</td>
-                                                    <td>{p.name}</td>
-                                                    
-        
-                                                </div>
-        
-                                            )
-                                        })}
-                                        
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+
+ 
+                    </div>
+                    {allsm.map((e, k) => {
+                        console.log(e);
+                        return (
+ 
+                            <div k={k} className="row">
+ 
+                                <div className="col-sm">
+                                    {e.teacherId.teacherId}
+                                </div>
+ 
+                                <div className="col-sm">
+                                    {e.studyId}
+                                </div>
+
+                                <div className="col-sm">
+                                    {e.name}
+                                </div>
+ 
+                            </div>
+ 
+                        )
+                    })}
+                    
+                </div>
         
                     </div>
                 </div >

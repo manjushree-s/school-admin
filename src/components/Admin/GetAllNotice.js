@@ -11,7 +11,7 @@ const GetAllNotice = (props) => {
         name: "",
         notice: "",
         noticeId: 0
-        
+
 
     });
     const [onenotice, setOnenotice] = useState({
@@ -19,7 +19,7 @@ const GetAllNotice = (props) => {
         name: "",
         notice: "",
         noticeId: 0
-        
+
 
     });
 
@@ -44,7 +44,7 @@ const GetAllNotice = (props) => {
 
 
     const viewnotice = (evt) => {
-        axios.get('http://localhost:8082/school-admin/student/getAllNotice')
+        axios.get('http://localhost:8082/school-admin/admin/getAllNotice')
             .then((response) => {
                 setnoticeList(response.data);
             }).catch(error => {
@@ -70,39 +70,30 @@ const GetAllNotice = (props) => {
                         onClick={viewnotice}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">Date </th>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>Date</u></div>
+                            <div className="col-sm"><u>Notice ID</u></div>
+                            <div className="col-sm"><u>Name</u></div>
+                            <div className="col-sm"><u>Notice</u></div>
 
-                                <th scope="col">Name</th>
-                                <th scope="col">Notices</th>
-                                <th scope="col">NoticeId</th>
+                        </p>
+                    </div>
+                    {noticeList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {noticeList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                            <div k={k} className="row">
+                                <div className="col-sm">{p.date}</div>
+                                <div className="col-sm">{p.noticeId}</div>
+                                <div className="col-sm">{p.name}</div>
+                                <div className="col-sm">{p.notice}</div>
 
-                                        <div k={k}>
-                                            <th scope="row">{p.date}</th>
+                            </div>
 
-                                            {/* <td>{p.courseId}</td> */}
-                                            <td>{p.name}</td>
-                                            <td>{p.notice}</td>
-                                            <td>{p.noticeId}</td>
-
-                                        </div>
-
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
+                        )
+                    })}
                 </div>
 
             </div>

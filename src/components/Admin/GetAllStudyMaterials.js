@@ -74,40 +74,28 @@ const GetAllStudyMaterial = (props) => {
                         onClick={viewstudymaterials}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">StudyMaterialsId </th>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>Study Material ID</u></div>
+                            <div className="col-sm"><u>Study Material Name</u></div>
+                            <div className="col-sm"><u>Teacher ID</u></div>
+                        </p>
+                    </div>
+                    {studyList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                                <th scope="col">Subject</th>
-                                <th scope="col">TeacherId</th>
-                               
+                            <div k={k} className="row">
+                                <div className="col-sm">{p.studyId}</div>
+                                <div className="col-sm">{p.name}</div>
+                                <div className="col-sm">{p.teacherId.teacherId}</div>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {studyList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                            </div>
 
-                                        <div k={k}>
-                                            <th scope="row">{p.studyId}</th>
-
-                                            {/* <td>{p.courseId}</td> */}
-                                            <td>{p.name}</td>
-                                            <td>{p.teacherId.teacherId}</td>
-                                           
-                                        </div>
-
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
+                        )
+                    })}
                 </div>
-
             </div>
         </div >
     );

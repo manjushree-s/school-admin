@@ -8,24 +8,24 @@ const GetAllComplaint = (props) => {
     const [complaintList, setComplaintList] = useState([]);
     const [complaint, setComplaint] = useState({
         complaintId: 0,
-            note: '',
-            date:'',
-            studentId:{
-                studentId:0,
-                studentName:'',
-                studentPassword:''
-            }
+        note: '',
+        date: '',
+        studentId: {
+            studentId: 0,
+            studentName: '',
+            studentPassword: ''
+        }
 
     });
     const [onecomplaint, setOneComplaint] = useState({
         complaintId: 0,
-            note: '',
-            date:'',
-            studentId:{
-                studentId:0,
-                studentName:'',
-                studentPassword:''
-            }
+        note: '',
+        date: '',
+        studentId: {
+            studentId: 0,
+            studentName: '',
+            studentPassword: ''
+        }
     });
 
 
@@ -75,37 +75,30 @@ const GetAllComplaint = (props) => {
                         onClick={viewComplaint}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">studentId </th>
-                                <th scope="col">complaintId</th>
-                                <th scope="col">note</th>
-                                <th scope="col">Date</th>
-                               
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {complaintList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
 
-                                        <div k={k}>
+                            <div className="col-sm"><u>studentId </u></div>
+                            <div className="col-sm"><u>complaintId</u></div>
+                            <div className="col-sm"><u>note</u></div>
+                            <div className="col-sm"><u>Date</u></div>
+                        </p></div>
+                    {complaintList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                                            <td>{p.studentId.studentId}</td>
-                                            <td>{p.complaintId}</td>
-                                            <td>{p.note}</td>
-                                            <td>{p.date}</td>
-                                            
-                                        </div>
+                            <div k={k} className="row">
 
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
+                                <div className="col-sm">{p.studentId.studentId}</div>
+                                <div className="col-sm">{p.complaintId}</div>
+                                <div className="col-sm">{p.note}</div>
+                                <div className="col-sm">{p.date}</div>
+
+                            </div>
+
+                        )
+                    })}
                 </div>
 
             </div>

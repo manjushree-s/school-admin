@@ -3,6 +3,9 @@ import { useHistory } from 'react-router';
 import studymaterial from 'C:/Users/Manjushree S/school-admin/src/images/studymaterial.jpg';
 import homework from 'C:/Users/Manjushree S/school-admin/src/images/homework.jpg';
 import course from 'C:/Users/Manjushree S/school-admin/src/images/course.jpg';
+import studentdetails from 'C:/Users/Manjushree S/school-admin/src/images/studentdetails.jpg';
+import student from 'C:/Users/Manjushree S/school-admin/src/images/Student.jpg';
+import notice from 'C:/Users/Manjushree S/school-admin/src/images/notice.jpg';
 
 const TeacherHome = () => {
 
@@ -28,6 +31,30 @@ const TeacherHome = () => {
 
 
         history.push('/GetHomeWork');
+
+        event.preventDefault();
+    }
+
+    const onSubmitGetAllStudents = (event) => {
+
+
+        history.push('/GetAllStudents');
+
+        event.preventDefault();
+    }
+
+    const onSubmitGetAllNotice = (event) => {
+
+
+        history.push('/GetAllNotice');
+
+        event.preventDefault();
+    }
+
+    const onSubmitGetStudentById = (event) => {
+
+
+        history.push('/GetStudentById');
 
         event.preventDefault();
     }
@@ -110,7 +137,7 @@ const TeacherHome = () => {
             <h1 className="display-4 text-center">Teacher Home</h1>
             <h4 className="text-center">The Art of Teaching is the Art of Assisting DISCOVERY!</h4>
             <div class="card-columns">
-                <div class="card" style={{ width: "15rem"}}>
+                <div class="card" style={{ width: "15rem" }}>
                     <img src={studymaterial} class="card-img-top" alt="studymaterial" />
                     <div class="card-body">
                         <h5 class="card-title text-center">Add StudyMaterial</h5>
@@ -128,14 +155,14 @@ const TeacherHome = () => {
                     </div>
                 </div>
                 <div class="card" style={{ width: "15rem" }}>
-                    <img src={studymaterial} class="card-img-top" alt="..."/>
+                    <img src={studymaterial} class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title text-center">view StudyMaterial</h5>
                         <p class="card-text text-center">Provide the Students the best of your Assistance. Give them the tools to build their future!</p>
                         <a href="#" class="btn btn-primary" onClick={onSubmitViewStudyMaterial}>Go </a>
                     </div>
                 </div>
-                
+
             </div>
 
             <div class="card-columns">
@@ -214,6 +241,32 @@ const TeacherHome = () => {
                         <h5 class="card-title text-center">Delete Course</h5>
                         <p class="card-text text-center">You set the track through which the students win!</p>
                         <a href="#" class="btn btn-primary" onClick={onSubmitDeleteCourse}>Go </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-columns">
+                <div class="card" style={{ width: "15rem" }}>
+                    <img src={studentdetails} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Get All Students</h5>
+                        <p class="card-text text-center">Students-Fire today, Stars tomorrow.</p>
+                        <a href="#" class="btn btn-primary" onClick={onSubmitGetAllStudents}>Go </a>
+                    </div>
+                </div>
+                <div class="card" style={{ width: "15rem" }}>
+                    <img src={student} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Get Student by ID</h5>
+                        <p class="card-text text-center">Students-Fire today, Stars tomorrow.</p>
+                        <a href="#" class="btn btn-primary" onClick={onSubmitGetStudentById}>Go </a>
+                    </div>
+                </div>
+                <div class="card" style={{ width: "15rem" }}>
+                    <img src={notice} class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">View notice</h5>
+                        <p class="card-text text-center">You set the track through which the students win!</p>
+                        <a href="#" class="btn btn-primary" onClick={onSubmitGetAllNotice}>Go </a>
                     </div>
                 </div>
             </div>

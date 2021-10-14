@@ -2,9 +2,9 @@ import axios from 'axios';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllHw } from 'C:/Users/Manjushree S/school-admin/src/redux/HomeWorkSlice';
+import { getAllHw } from '../../redux/HomeWorkSlice';
 
-const ViewHomework = () => {
+const ViewHomeWork = () => {
 
     const dispatch = useDispatch();
     const hwData = useSelector((state) => state.hw.hwState);
@@ -37,7 +37,7 @@ const ViewHomework = () => {
 
     const submitGetAllhw = (evt) => {
         console.log("submitGetAllhw");
-        axios.get('http://localhost:8082/school-admin/teacher/getHomework')
+        axios.get('http://localhost:8082/school-admin/teacher/teacher/getHomework')
             .then((response) => {
                 dispatch(getAllHw(response.data));
             }).catch(error => {
@@ -47,57 +47,63 @@ const ViewHomework = () => {
     }
 
     return (
-        <div className="container" >
-            <title>Get All HomeWork</title>
-            <h1>View Homework</h1>
-            <div>
-                <div>
-                    <input
-                        type="submit"
-                        id="submit"
-                        name="submit"
-                        className="btn btn-primary mb-3"
-                        value="Get All Homework"
-                        onClick={submitGetAllhw}
-                    />
+                <div className="container" >
+                    <title>Get All HomeWork</title>
+                    <h1>View Homework</h1>
+                    <div>
+                        <div>
+                            <input
+                                type="submit"
+                                id="submit"
+                                name="submit"
+                                className="btn btn-primary mb-3"
+                                value="Get All HomeWork"
+                                onClick={submitGetAllhw}
+                            />
+                        </div>
+                        <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>TeacherId</u>
+                            </div>
+                            <div className="col-sm"><u>Homework Id</u></div>
+                            <div className="col-sm"><u>Name</u></div>
+ 
+                        </p>
+
+
+ 
+                    </div>
+                    {allhw.map((e, k) => {
+                        console.log(e);
+                        return (
+ 
+                            <div k={k} className="row">
+ 
+                                <div className="col-sm">
+                                    {e.teacherId.teacherId}
+                                </div>
+ 
+                                <div className="col-sm">
+                                    {e.homeId}
+                                </div>
+
+                                <div className="col-sm">
+                                    {e.name}
+                                </div>
+ 
+                            </div>
+ 
+                        )
+                    })}
+                    
                 </div>
-                <div className="Container text-center">
-                    <table class="table table-hover table-dark text-center">
-                        <thead>
-                            <tr>
-                                <th scope="col">Teacher Id </th>
-                                <th scope="col">HomeWork Id</th>
-                                <th scope="col">Name</th>
+        
+                    </div>
+                </div >
+            );
 
-                                {/* <p>teacherID homeID name</p> */}
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {allhw.map((p, k) => {
-                                    console.log(p);
-                                    return (
-                                            <div k={k}>
-
-                                                <td scope="col text-center">{p.teacherId.teacherId}</td>
-                                                <td scope="col text-center">{p.homeId}</td>
-                                                <td scope="col text-center">{p.name}</td>
-
-                                            </div>
-                                    )
-                                })}
-
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </div >
-    );
-
-
+   
 }
 
-export default ViewHomework;
+export default ViewHomeWork;

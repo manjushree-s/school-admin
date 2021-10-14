@@ -75,39 +75,31 @@ const GetAllCourse = (props) => {
                         onClick={viewcourse}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
-                                <th scope="col">courseId </th>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>courseId</u></div>
+                            <div className="col-sm"><u>teacherId</u></div>
+                            <div className="col-sm"><u>Course-name</u></div>
+                            <div className="col-sm"><u>Total No.of Hours</u></div>
 
-                                <th scope="col">teacherId</th>
-                                <th scope="col">Course-name</th>
-                                <th scope="col">Total No.of Hours</th>
+                        </p>
+                    </div>
+                    {courseList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {courseList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                            <div k={k} className="row">
+                                <div className="col-sm">{p.courseId}</div>
+                                <div className="col-sm">{p.teacherId.teacherId}</div>
+                                <div className="col-sm">{p.name}</div>
+                                <div className="col-sm">{p.numhrs}</div>
 
-                                        <div k={k}>
-                                            <th scope="row">{p.courseId}</th>
+                            </div>
 
-                                            {/* <td>{p.courseId}</td> */}
-                                            <td>{p.teacherId.teacherId}</td>
-                                            <td>{p.name}</td>
-                                            <td>{p.numhrs}</td>
+                        )
+                    })}
 
-                                        </div>
-
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
 
             </div>

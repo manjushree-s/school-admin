@@ -62,39 +62,34 @@ const GetAllAdmin = (props) => {
                         onClick={viewadmin}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
 
-                                <th scope="col">Admin ID</th>
-                                <th scope="col">Admin Name</th>
-                                <th scope="col">Admin Password</th>
+                            <div className="col-sm"><u>Admin ID</u></div>
+                            <div className="col-sm"><u>Admin Name</u></div>
+                            <div className="col-sm"><u>Admin Password</u></div>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {adminList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                        </p>
+                    </div>
+                    {adminList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                                        <div k={k}>
-                                            
-                                            <td>{p.adminId}</td>
-                                            <td>{p.adminName}</td>
-                                            <td>{p.adminPassword}</td>
+                            <div k={k} className="row">
 
-                                        </div>
+                                <div className="col-sm">{p.adminId}</div>
+                                <div className="col-sm">{p.adminName}</div>
+                                <div className="col-sm">{p.adminPassword}</div>
 
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
+                            </div>
+
+
+                        )
+                    })}
                 </div>
 
-            </div>
+            </div >
         </div >
     );
 }

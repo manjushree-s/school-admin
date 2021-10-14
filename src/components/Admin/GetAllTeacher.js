@@ -62,39 +62,31 @@ const GetAllTeacher = (props) => {
                         onClick={viewteacher}
                     />
                 </div>
-                <div className="Container text-left">
-                    <table class="table table-hover table-dark">
-                        <thead>
-                            <tr>
+                <div className="Container text-left justify-content-center table-striped table-dark table-bordered">
+                    <div>
+                        <p className="row font-italic">
+                            <div className="col-sm"><u>Teacher Id</u></div>
+                            <div className="col-sm"><u>Teacher Name</u></div>
+                            <div className="col-sm"><u>Teacher Password</u></div>
+                        </p>
+                    </div>
+                    {teacherList.map((p, k) => {
+                        console.log(p);
+                        return (
 
-                                <th scope="col">Teacher ID</th>
-                                <th scope="col">Teacher Name</th>
-                                <th scope="col">Teacher Password</th>
+                            <div k={k} className="row">
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {teacherList.map((p, k) => {
-                                    console.log(p);
-                                    return (
+                                <div className="col-sm">{p.teacherId}</div>
+                                <div className="col-sm">{p.teacherName}</div>
+                                <div className="col-sm">{p.teacherPassword}</div>
 
-                                        <div k={k}>
-                                            
-                                            <td>{p.teacherId}</td>
-                                            <td>{p.teacherName}</td>
-                                            <td>{p.teacherPassword}</td>
+                            </div>
 
-                                        </div>
+                        )
+                    })}
+                </div >
 
-                                    )
-                                })}
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
+            </div >
         </div >
     );
 }

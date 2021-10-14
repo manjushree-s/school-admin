@@ -63,6 +63,9 @@ import UpdateHomework from './components/Teacher/UpdateHomework'
 import ViewHomework from './components/Teacher/ViewHomework';
 import ViewStudyMaterial from './components/Teacher/ViewStudyMaterial';
 import DeleteCourse from './components/Teacher/DeleteCourse';
+import GetAllStudents from './components/Teacher/GetAllStudents';
+import GetStudentsById from './components/Teacher/GetStudentById';
+import ViewAllNotices from './components/Teacher/GetAllNotice';
 import UpdateCourse from './components/Teacher/UpdateCourse';
 
 const Routes = () => {
@@ -136,6 +139,9 @@ const Routes = () => {
                             <Route path="/ViewStudyMaterial"> <ViewStudyMaterial /></Route>
                             <Route path="/DeleteCourse"> <DeleteCourse /></Route>
                             <Route path="/UpdateCourse"> <UpdateCourse /></Route>
+                            <Route path="/GetAllStudents"> <GetAllStudents /> </Route>
+                            <Route path="/GetStudentsById"> <GetStudentsById /> </Route>
+                            <Route path="/ViewAllNotices"><ViewAllNotices /></Route>
                             <Route path="/*"> <PageNotFound /> </Route>
 
                         </Switch>
