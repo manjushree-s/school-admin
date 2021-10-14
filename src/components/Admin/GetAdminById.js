@@ -4,12 +4,10 @@ import React, { useState, useEffect } from 'react';
 
 const GetAdminById = () => {
 
-    //const [empList, setEmpList] = useState([]);
     const [sm, setsm] = useState({
         adminId: 0,
         adminName: "",
         adminPassword: ""
-
 
     });
 
@@ -32,11 +30,11 @@ const GetAdminById = () => {
 
     const submitsmId = (evt) => {
         console.log("submitGetsmById");
-        axios.get(`http://localhost:8083/school-admin/admin/getAdmin/${sm.adminId}`)
+        axios.get(`http://localhost:8082/school-admin/admin/getAdmin/${sm.adminId}`)
             .then((response) => {
                 setsm(response.data);
             }).catch(error => {
-                alert(" does not exist!");
+                alert("ID does not exist!");
             });
         evt.preventDefault();
     }

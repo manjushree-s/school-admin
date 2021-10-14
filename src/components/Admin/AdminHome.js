@@ -85,7 +85,7 @@ const AdminHome = () => {
 
     const onSubmitGetAllAdmin = (event) => {
 
-        history.push('/GetAllComplaint');
+        history.push('/GetAllAdmin');
 
         event.preventDefault();
     }
